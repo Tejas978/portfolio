@@ -1,0 +1,221 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  /* ... other theme variables ... */
+}
+
+/* ==========================================================================
+   BASE STYLES & LAYOUT
+   ========================================================================== */
+@layer base {
+  :root {
+    /* --- Light Mode Colors (for reference) --- */
+    --background: oklch(0.98 0.01 270);
+    --foreground: oklch(0.1 0.01 270);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.145 0 0);
+    --primary: oklch(0.45 0.15 270);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.97 0 0);
+    --secondary-foreground: oklch(0.205 0 0);
+    --muted: oklch(0.95 0.01 270);
+    --muted-foreground: oklch(0.556 0 0);
+    --border: oklch(0.9 0.01 270);
+    --input: oklch(0.9 0.01 270);
+    --ring: oklch(0.45 0.15 270);
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* --- Dark Mode Colors (Professionally Refined for Dark BG) --- */
+    --background: oklch(0.11 0.02 255); /* A very dark, cool-toned charcoal */
+    --foreground: oklch(0.95 0.02 95);   /* Warm ivory for text */
+    
+    /* Card is now noticeably lighter than the background for a floating effect */
+    --card: oklch(0.16 0.02 255);         
+    --card-foreground: var(--foreground);
+    
+    --popover: var(--background);
+    --popover-foreground: var(--foreground);
+
+    --primary: oklch(0.78 0.15 70);       /* Warm amber for accents */
+    --primary-foreground: oklch(0.2 0.02 60);
+
+    --secondary: oklch(0.18 0.02 255);    /* Slightly lifted neutral for secondary elements */
+    --secondary-foreground: var(--foreground);
+
+    --muted: oklch(0.16 0.02 255);
+    --muted-foreground: oklch(0.75 0.02 95); /* Softer muted text */
+
+    --accent: oklch(0.72 0.08 168);       /* Muted teal */
+    --accent-foreground: var(--foreground);
+
+    --destructive: oklch(0.5 0.18 28);
+    --destructive-foreground: var(--foreground);
+
+   --border: oklch(0.39 0 0);     /* Slightly lighter borders for better definition */
+    --input: var(--border);
+    --ring: var(--primary);
+
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+  }
+
+  * {
+    border-color: oklch(var(--border));
+    outline-color: oklch(var(--ring) / 0.5);
+  }
+
+  body {
+    background-color: oklch(var(--background));
+    color: oklch(var(--foreground));
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+
+
+/* =========================
+   INLINE THEME COLORS
+   ========================= */
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* =========================
+   RETRO OVERLAY EFFECTS
+   ========================= */
+.retro-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: -5;
+}
+
+.retro-scanlines {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.06) 0px,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 3px,
+    transparent 4px
+  );
+  animation: scan 14s linear infinite;
+}
+
+@keyframes scan {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 100vh;
+  }
+}
+
+.retro-vignette {
+  position: absolute;
+  inset: 0;
+  box-shadow: inset 0 0 220px rgba(0, 0, 0, 0.65),
+    inset 0 0 100px rgba(0, 0, 0, 0.45);
+  opacity: 0.8;
+}
+
+.retro-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 3px 3px, 5px 5px;
+  background-position: 0 0, 10px 5px;
+  animation: grainShift 2.5s steps(6) infinite;
+  mix-blend-mode: soft-light;
+}
+
+@keyframes grainShift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* =========================
+   TAILWIND BASE APPLIES
+   ========================= */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
