@@ -26,8 +26,13 @@ export default function Hero() {
   return (
     <section
       id="hero-section"
-      className="relative text-center py-16 sm:py-20 md:py-32 overflow-hidden"
-    >
+      className="
+    relative text-center overflow-hidden
+    py-20 px-6          /* MOBILE */
+    sm:py-20 sm:px-0
+    md:py-32
+  "
+>
       {/* Content */}
       <motion.div
         className="relative z-10 space-y-4 sm:space-y-6 max-w-4xl mx-auto px-4 sm:px-6"
