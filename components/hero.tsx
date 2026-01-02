@@ -36,21 +36,21 @@ export default function Hero() {
         animate="visible"
       >
         <motion.p
-          className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-primary mb-8 sm:mb-2 "
+          className="text-xs sm:text-sm font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-primary mb-5 sm:mb-5 "
           variants={itemVariants}
         >
           Tejas Khaire — Full Stack Developer
         </motion.p>
 
         <motion.h1 
-          className="text-balance text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 px-2 sm:px-0 "
+          className="text-balance text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70 px-2 sm:px-0 "
           variants={itemVariants}
         >
           Crafting Digital Experiences with Code & Creativity
         </motion.h1>
 
         <motion.p
-          className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground px-2 sm:px-0"
+          className="text-base sm:text-base md:text-lg max-w-2xl mx-auto leading-relaxed text-muted-foreground px-2 sm:px-0"
           variants={itemVariants}
         >
           I build elegant, efficient, and scalable web solutions, specializing in the{" "}
