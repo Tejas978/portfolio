@@ -5,42 +5,52 @@ import { motion } from "framer-motion";
 
 const PROJECTS = [
   {
-    title: "Crypto Vision",
-    description:
-      "A real-time crypto tracking dashboard that displays live prices, trends, watchlist features, and detailed coin analytics with interactive charts.",
-    tags: ["React.js", "Material UI", "CoinGecko API", "Context API"],
-    href: "/projects/crypto-currency-tracker",
-    imageUrl: "/images/CryptoVision.png",
-    liveUrl: "https://crypto-analytics-dashboard-kohl.vercel.app",
-    sourceUrl: "https://github.com/Tejas978/crypto-analytics-dashboard",
-  },
-  {
-  title: "SkillBoost – AI Powered LMS",
-  description: "A full-stack, AI-driven Learning Management System enabling course creation, enrollment, secure payments, and personalized learning through smart search and role-based dashboards.",
-  tags: [
-    "React.js",
-    "Tailwind CSS",
-    "Redux Toolkit",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Firebase Auth",
-    "Razorpay",
-    "REST API"
-  ],
-  imageUrl: "/images/LMS.png",
-  liveUrl: "https://skillboost-smart-learning-managemen.vercel.app",
-  sourceUrl: "https://github.com/Tejas978/skillboost-smart-learning-management-system"
-}
-,
-  {
-    title: "Medical Image Diagnosis",
-    description: "Deep-learning based image diagnosis system with CNN & Streamlit.",
-    tags: ["Python", "TensorFlow", "CNN", "Streamlit", "MERN"],
-    imageUrl: "/images/Medical.png",
-    liveUrl: "#",
-    sourceUrl: "#",
-  },
+    title: "BillDesk – AI Invoice Generator",
+      description: "A full-stack AI-powered invoice generation system integrated with Gemini AI to convert natural language into structured, professional invoices. Features include secure authentication, automated calculations, real-time invoice management, and PDF export.",
+      tags: [
+        "React.js",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Gemini AI",
+        "Clerk Auth",
+        "REST API",
+      ],
+      imageUrl: "/images/InvoiceGen.png",
+      liveUrl: "https://bill-desk-ai-invoice-generator-1.onrender.com/",
+      sourceUrl: "https://github.com/Tejas978/bill-desk-ai-invoice-generator"
+    },
+
+    {
+      title: "SkillBoost – AI Powered LMS",
+      description: "A full-stack, AI-driven Learning Management System enabling course creation, enrollment, secure payments, and personalized learning through smart search and role-based dashboards.",
+      tags: [
+        "React.js",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Firebase Auth",
+        "Razorpay",
+        "REST API"
+      ],
+      imageUrl: "/images/LMS.png",
+      liveUrl: "https://skillboost-smart-learning-managemen.vercel.app",
+      sourceUrl: "https://github.com/Tejas978/skillboost-smart-learning-management-system"
+    },
+    {
+      title: "Crypto Vision",
+      description:
+        "A real-time crypto tracking dashboard that displays live prices, trends, watchlist features, and detailed coin analytics with interactive charts.",
+      tags: ["React.js", "Material UI", "CoinGecko API", "Context API"],
+      href: "/projects/crypto-currency-tracker",
+      imageUrl: "/images/CryptoVision.png",
+      liveUrl: "https://crypto-analytics-dashboard-kohl.vercel.app",
+      sourceUrl: "https://github.com/Tejas978/crypto-analytics-dashboard",
+    },
   {
     title: "Weather App",
     description: "A weather forecasting app providing temperature & conditions for any location.",
