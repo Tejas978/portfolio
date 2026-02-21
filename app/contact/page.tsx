@@ -39,7 +39,7 @@ const SOCIALS = [
     },
     {
         name: "LinkedIn",
-        href: "https://linkedin.com/in/tejaskhaire",
+        href: "https://www.linkedin.com/in/tejas-khaire-32714534a/",
         icon: <FaLinkedin size={28} />,
     },
 ];
