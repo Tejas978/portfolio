@@ -114,7 +114,7 @@ const CERTIFICATIONS = [
 
 const SOCIALS = [
     { name: "GitHub", icon: <FaGithub size={32} />, url: "https://github.com/Tejas978" },
-    { name: "LinkedIn", icon: <FaLinkedin size={32} />, url: "https://linkedin.com/in/tejaskhaire" },
+    { name: "LinkedIn", icon: <FaLinkedin size={32} />, url: "https://www.linkedin.com/in/tejas-khaire-32714534a/" },
 ];
 
 export default function AboutPage() {
